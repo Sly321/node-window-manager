@@ -9,7 +9,8 @@
     "install": "node install.js",
     "build": "tsc",
     "prepare": "npm run build",
-    "watch": "tsc --watch"
+	"watch": "tsc --watch",
+	"start": "ts-node example.ts"
   },
   "repository": {
     "type": "git",

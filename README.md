@@ -1,125 +1,29 @@
 # node-window-manager
 
-> NOTE: The package works currently only on Windows.
+## Requirements
 
-Manage windows in macOS, Windows and Linux
+> This is required for compiling `c++` code to a native `.node` module
 
-# Install
-
-To install this package, just run
-
-```bash
-$ npm install window-manager
+```sh
+npm install --global --production windows-build-tools
 ```
 
-# Quick start
+## Install
 
-The following example shows how to get the currently focused window's title and hide it.
-
-```javascript
-const { getActiveWindow } = require("window-manager");
-
-const window = getActiveWindow();
-
-// Prints the currently focused window title.
-console.log(window.getTitle());
-
-// Hide the window.
-window.hide();
+```sh
+npm i
 ```
 
-# Documentation
+## Run
 
-## Class `WindowsManager`
-
-### Methods
-
-`WindowsManager.getActive()`
-
--   Returns [`Window`](#class-window)
-
-`createMouseUpHook(callback: Function)`
-
-> NOTE: It's recommended to use this hook in another process, since it freezes current process.
-
--   `callback` Function - fires when system has received mouse up input
-
-## Class `Window`
-
-### `new Window(windowHandle: number)`
-
-### Methods
-
-`Window.getBounds()`
-
--   Returns:
-    -   `left` number
-    -   `top` number
-    -   `right` number
-    -   `bottom` number
-
-`Window.getTitle()`
-
--   Returns string
-
-`Window.getWidth()`
-
--   Returns number
-
-`Window.getHeight()`
-
--   Returns number
-
-`Window.move(x: number, y: number, width: number, height: number)`
-
-Moves the window to x, y position and sets new width and height.
-
-`Window.setState(state: [WindowState](#enum-windowstate))`
-
-Sets the window state, for example minimizes it.
-
-`Window.show()`
-
-Shows the window.
-
-`Window.hide()`
-
-Hides the window.
-
-`Window.minimize()`
-
-Minimizes the window.
-
-`Window.restore()`
-
-Restores the window.
-
-`Window.maximize()`
-
-Maximizes the window.
-
-`Window.setTopMost(toggle: boolean)`
-
-Toggles window top most setting.
-
-## Enum `WindowState`
-
-```javascript
-const { WindowState } = require("window-manager");
+```sh
+npm start
 ```
 
-Windows states:
+You can clip your windows fences now in a 3x3 Grid with `Alt` + `NUMPAD` 1-9 to the desired locations.
 
--   `HIDE`
--   `SHOWNORMAL`
--   `SHOWMINIMIZED`
--   `MAXIMIZE`
--   `SHOWMAXIMIZED`
--   `SHOWNOACTIVATE`
--   `SHOW`
--   `MINIMIZE`
--   `SHOWMINNOACTIVE`
--   `SHOWNA`
--   `RESTORE`
--   `SHOWDEFAULT`
--   `FORCEMINIMIZE`
+## Good Reads
+
+[Original Repository](https://github.com/sentialx/node-window-manager)
+[https://blog.risingstack.com/writing-native-node-js-modules/](https://blog.risingstack.com/writing-native-node-js-modules/)
+[https://nodejs.org/api/addons.html](https://nodejs.org/api/addons.html)
