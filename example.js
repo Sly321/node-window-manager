@@ -1,7 +1,8 @@
-const windowsManager = require("./dist/index");
+const { windowsManager } = require("./dist/index");
 
 console.log(windowsManager);
 
-windowsManager.default.onActivated.addListener(window => {
-  console.log(window.handle);
+windowsManager.onActivated.addListener(window => {
+    console.log(window.handle);
+    process.exit(0);
 });

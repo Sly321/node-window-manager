@@ -1,10 +1,13 @@
 # node-window-manager
+
 > NOTE: The package works currently only on Windows.
 
 Manage windows in macOS, Windows and Linux
 
 # Install
+
 To install this package, just run
+
 ```bash
 $ npm install window-manager
 ```
@@ -14,7 +17,7 @@ $ npm install window-manager
 The following example shows how to get the currently focused window's title and hide it.
 
 ```javascript
-const { getActiveWindow } = require('window-manager');
+const { getActiveWindow } = require("window-manager");
 
 const window = getActiveWindow();
 
@@ -33,13 +36,13 @@ window.hide();
 
 `WindowsManager.getActive()`
 
-- Returns [`Window`](#class-window)
+-   Returns [`Window`](#class-window)
 
 `createMouseUpHook(callback: Function)`
 
 > NOTE: It's recommended to use this hook in another process, since it freezes current process.
 
-- `callback` Function - fires when system has received mouse up input
+-   `callback` Function - fires when system has received mouse up input
 
 ## Class `Window`
 
@@ -49,23 +52,23 @@ window.hide();
 
 `Window.getBounds()`
 
-- Returns:
-  - `left` number
-  - `top` number
-  - `right` number
-  - `bottom` number
+-   Returns:
+    -   `left` number
+    -   `top` number
+    -   `right` number
+    -   `bottom` number
 
 `Window.getTitle()`
 
-- Returns string
+-   Returns string
 
 `Window.getWidth()`
 
-- Returns number
+-   Returns number
 
 `Window.getHeight()`
 
-- Returns number
+-   Returns number
 
 `Window.move(x: number, y: number, width: number, height: number)`
 
@@ -102,20 +105,21 @@ Toggles window top most setting.
 ## Enum `WindowState`
 
 ```javascript
-const { WindowState } = require('window-manager');
+const { WindowState } = require("window-manager");
 ```
 
-Windows states: 
-- `HIDE`
-- `SHOWNORMAL`
-- `SHOWMINIMIZED`
-- `MAXIMIZE`
-- `SHOWMAXIMIZED`
-- `SHOWNOACTIVATE`
-- `SHOW`
-- `MINIMIZE`
-- `SHOWMINNOACTIVE`
-- `SHOWNA`
-- `RESTORE`
-- `SHOWDEFAULT`
-- `FORCEMINIMIZE`
+Windows states:
+
+-   `HIDE`
+-   `SHOWNORMAL`
+-   `SHOWMINIMIZED`
+-   `MAXIMIZE`
+-   `SHOWMAXIMIZED`
+-   `SHOWNOACTIVATE`
+-   `SHOW`
+-   `MINIMIZE`
+-   `SHOWMINNOACTIVE`
+-   `SHOWNA`
+-   `RESTORE`
+-   `SHOWDEFAULT`
+-   `FORCEMINIMIZE`

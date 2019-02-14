@@ -3,15 +3,15 @@ import { Window, EventEmitter } from ".";
 const addon = require("bindings")("windows-window-manager");
 
 export class WindowsManager {
-  public onActivated: EventEmitter = new EventEmitter("window-activated");
+    public onActivated: EventEmitter = new EventEmitter("window-activated");
 
-  getActive() {
-    return new Window(addon.getActiveWindow());
-  }
+    getActive() {
+        return new Window(addon.getActiveWindow());
+    }
 
-  createMouseUpHook(callback: () => void) {
-    addon.createMouseUpHook(() => {
-      callback();
-    });
-  }
+    createMouseUpHook(callback: () => void) {
+        addon.createMouseUpHook(() => {
+            callback();
+        });
+    }
 }

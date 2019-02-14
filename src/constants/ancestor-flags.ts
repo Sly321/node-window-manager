@@ -1,5 +1,5 @@
 export const AncestorFlags = {
-  PARENT: 1,
-  ROOT: 2,
-  ROOTOWNER: 3
+    PARENT: 1,
+    ROOT: 2,
+    ROOTOWNER: 3
 };
